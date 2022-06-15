@@ -73,7 +73,7 @@ exports.deleteBusinessById = (id) => {
 exports.findAllBusiness = () => {
   return new Promise((resolve, reject) => {
     Business.findAll({
-      attributes: ["id", "Name", "product"],
+      attributes: ["id", "login", "password", "age", "isDeleted"],
     }).then(
       (business) => {
         resolve(business);
